@@ -1,0 +1,10 @@
+const respuesta =
+ await fetch("servicio.php")
+if (respuesta.ok) {
+ const texto =
+  await respuesta.text()
+ alert(texto)
+} else {
+ throw new Error(
+  respuesta.statusText)
+}
